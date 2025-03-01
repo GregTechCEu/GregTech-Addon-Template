@@ -7,6 +7,7 @@ import com.gregtechceu.gtceu.api.data.chemical.material.event.PostMaterialEvent;
 import com.gregtechceu.gtceu.api.machine.MachineDefinition;
 import com.gregtechceu.gtceu.api.recipe.GTRecipeType;
 import com.gregtechceu.gtceu.api.registry.registrate.GTRegistrate;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Items;
@@ -16,11 +17,13 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(ExampleMod.MOD_ID)
 public class ExampleMod {
+
     public static final String MOD_ID = "examplemod";
     public static final Logger LOGGER = LogManager.getLogger();
     public static GTRegistrate EXAMPLE_REGISTRATE = GTRegistrate.create(ExampleMod.MOD_ID);
@@ -61,19 +64,19 @@ public class ExampleMod {
 
     // As well as this.
     private void addMaterials(MaterialEvent event) {
-        //CustomMaterials.init();
+        // CustomMaterials.init();
     }
 
     // This is optional, though.
     private void modifyMaterials(PostMaterialEvent event) {
-        //CustomMaterials.modify();
+        // CustomMaterials.modify();
     }
 
     private void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
-        //CustomRecipeTypes.init();
+        // CustomRecipeTypes.init();
     }
 
     private void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
-        //CustomMachines.init();
+        // CustomMachines.init();
     }
 }

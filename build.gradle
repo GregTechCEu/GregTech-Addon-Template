@@ -95,21 +95,22 @@ legacyForge {
             // You can set various levels here.
             // Please read: https://stackoverflow.com/questions/2031163/when-to-use-the-different-log-levels
             logLevel = org.slf4j.event.Level.DEBUG
-            sourceSet = sourceSets.main
         }
         client {
             client()
+            sourceSet = sourceSets.main
             programArguments.addAll('--refresh-dependencies')
             systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
         }
         server {
             server()
+            sourceSet = sourceSets.main
             systemProperty('forge.enabledGameTestNamespaces', project.mod_id)
             programArguments.addAll('--nogui', '--world', 'world-extra')
         }
         data {
             data()
-
+            sourceSet = sourceSets.main
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
             programArguments.addAll('--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').getAbsolutePath(), '--existing', file('src/main/resources/').getAbsolutePath())
             programArguments.addAll('--existing-mod', 'gtceu')
@@ -151,15 +152,16 @@ dependencies {
     modImplementation("com.gregtechceu.gtceu:gtceu-${minecraft_version}:${gtceu_version}:slim") { transitive = false }
     modImplementation("com.lowdragmc.ldlib:ldlib-forge-${minecraft_version}:${ldlib_version}") { transitive = false }
     modImplementation("com.tterrag.registrate:Registrate:${registrate_version}")
-    modRuntimeOnly("dev.toma.configuration:configuration-forge-${minecraft_version}:${configuration_version}")
+    modImplementation("dev.toma.configuration:configuration-forge-${minecraft_version}:${configuration_version}")
 
     // lombok
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
 }
 
+// See com.example.examplemod.mixin.DummyMixin for information about mixins
 mixin {
-    add sourceSets.main, "${mod_id}.refmap.json"
+    add sourceSets.main, "mixins.${mod_id}.refmap.json"
     config "${mod_id}.mixins.json"
 }
 
@@ -190,4 +192,5 @@ tasks.withType(JavaCompile).configureEach {
     // If Javadoc is generated, this must be specified in that task too.
     options.encoding = "UTF-8"
     options.release.set(17)
+    options.compilerArgs << "-Aquiet=true" // Suppress mixin notes
 }

@@ -39,9 +39,9 @@ public class ExampleGTAddon implements IGTAddon {
     // KubeJS WILL REMOVE YOUR RECIPES IF THESE ARE NOT REGISTERED.
     /*
      * public static final ContentJS<Double> PRESSURE_IN = new ContentJS<>(NumberComponent.ANY_DOUBLE,
-     * GregitasRecipeCapabilities.PRESSURE, false);
+     * CustomRecipeCapabilities.PRESSURE, false);
      * public static final ContentJS<Double> PRESSURE_OUT = new ContentJS<>(NumberComponent.ANY_DOUBLE,
-     * GregitasRecipeCapabilities.PRESSURE, true);
+     * CustomRecipeCapabilities.PRESSURE, true);
      * 
      * @Override
      * public void registerRecipeKeys(KJSRecipeKeyEvent event) {

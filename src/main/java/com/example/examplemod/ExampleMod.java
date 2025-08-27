@@ -23,6 +23,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 @Mod(ExampleMod.MOD_ID)
+@SuppressWarnings("removal")
 public class ExampleMod {
 
     public static final String MOD_ID = "examplemod";
@@ -113,7 +114,7 @@ public class ExampleMod {
     }
 
     /**
-     * Used to register your own new RecipeTypes.
+     * Used to register your own new machines.
      * Call init() from your Machine class(es) here
      * 
      * @param event

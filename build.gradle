@@ -34,7 +34,7 @@ repositories {
     }
     maven {
         name 'FirstDarkDev'
-        url "https://maven.firstdarkdev.xyz/snapshots/"
+        url "https://maven.firstdark.dev/snapshots/"
     }
     maven { // Registrate
         url = "https://maven.tterrag.com/"

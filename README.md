@@ -14,7 +14,6 @@ Unfortunately, there isn't any official documentation so far for making GregTech
 Repositories for other addons:
 
 - [GT Community Additions](https://github.com/mordgren/GTCA)
-- [Gregtech: Extended Chemistry Extended](https://github.com/jmoiron/Gregtech-Extended-Chemistry)
 - [MoniLabs](https://github.com/NegaNote/MoniLabs)
 
 Additionally, you may be able to find help on the [GregTech CEu Discord](https://discord.gg/bWSWuYvURP)!

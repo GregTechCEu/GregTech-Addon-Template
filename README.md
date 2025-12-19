@@ -15,8 +15,7 @@ Repositories for other addons:
 
 - [GT Community Additions](https://github.com/mordgren/GTCA)
 - [Gregtech: Extended Chemistry Extended](https://github.com/jmoiron/Gregtech-Extended-Chemistry)
-- [GCYLM](https://github.com/eve336/gcylm)
-- [Gregicality Rocketry](https://github.com/Argent-Matter/gcyr/)
+- [MoniLabs](https://github.com/NegaNote/MoniLabs)
 
 Additionally, you may be able to find help on the [GregTech CEu Discord](https://discord.gg/bWSWuYvURP)!
 
